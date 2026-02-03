@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nutriz MNM 생각</title>
+    <link rel="stylesheet" href="../css/style_sub_3.css">
+    <link rel="icon" type="image/ico" sizes="16x16" href="./images/favicon.ico">
+
+
+    <!-- /* 원하는 높이로 스크롤시 아이콘나타나기 */ -->
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/script.js"></script>
+
+
+</head>
+
+<body>
+
+
+    <div id="wrap_wrap">
+
+        <!-- /* 원하는 높이로 스크롤시 아이콘나타나기 */ -->
+        <a href="#" class="top"><img src="./images/top.png" alt="top버튼"></a>
+        
+        <a href="https://sammir114.github.io/portfolio/#projects" class="home">
+    <img src="./images/home.png"    alt="home버튼">
+</a>
+
+
+
+
+
+
+        <!-- 헤더 꾸미기 S -->
+        <div id="header_wrap">
+            <div class="header">
+                <h1 class="logo">
+                    <a href="../index.html">
+                        <img src="./images/logo.png" alt="로고">
+                    </a>
+                </h1>
+            </div>
+        </div>
+        <!-- 헤더 꾸미기 E -->
+
+
+        <!-- 메인배너 / Swiper 꾸미기 S -->
+        <!-- <div id="main_banner">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="../images/mb02.jpg" alt="mb02"></div>
+                </div>
+            </div>
+        </div> -->
+        <!-- 메인배너 / Swiper 꾸미기 E -->
+
+
+
+        <!-- 상세페이지 S-->
+        <div class="container">
+            <div class="product-section">
+                <div class="product-image">
+                    <img src="./images/best_03.jpg" alt="product-image_3">
+                </div>
+
+                <div class="product-info">
+                    <div class="brand">NUTRIZ</div>
+                    <h1 class="product-title">노화방지 <strong>MNM 생각</strong></h1>
+                    <div class="rating">★★★★★ (4.9) | 리뷰 98개</div>
+                    <div class="price" data-price="
+            8000">38,000원</div>
+
+                    <div class="description">
+                        시간을 되돌리는 활력 에너지,
+                        <br>이제 MNM으로
+                        <br>세포 속부터 꽉 채우세요.
+                    </div>
+
+                    <div class="option-group">
+                        <label>제품 선택</label>
+                        <select>
+                            <option>MNM생각 1박스 (30포)</option>
+
+
+                        </select>
+                    </div>
+
+                    <div class="quantity-control">
+                        <button onclick="changeQuantity(-1)">-</button>
+                        <input type="text" id="quantity" value="1" readonly>
+                        <button onclick="changeQuantity(1)">+</button>
+                    </div>
+
+                    <div class="total-price-section">
+                        <span>총 상품 금액</span>
+                        <span id="total-price">38,000원</span>
+                    </div>
+
+                    <div class="btn-group">
+                        <button class="btn btn-cart" onclick="alert('장바구니에 담겼습니다!')">장바구니</button>
+                        <button class="btn btn-buy" onclick="alert('구매 페이지로 이동합니다.')">구매하기</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detail-tabs">
+                <div class="tab-buttons">
+                    <div class="tab-btn active">상세정보</div>
+                    <div class="tab-btn">구매평 (98)</div>
+                    <div class="tab-btn">Q&A</div>
+                </div>
+                <div class="tab-content">
+                    <p><img src="./images/product3_detail_page1.jpg" alt="product3_detail_page1"></p>
+                    <p><img src="./images/product3_detail_page2.jpg" alt="product3_detail_page2"></p>
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- footer S-->
+        <div id="footer">
+            <div class="footer_wrap">
+                <h1 class="footer_logo"><a href="#"><img src="./images/logo_white.png" alt="logo_white"></a></h1>
+                <div class="footer_util">
+                    <ul class="text1">
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보취급방침</a></li>
+                        <li><a href="#">이메일무단수집거부</a></li>
+                        <li><a href="#">문의하기</a></li>
+                        <li><a href="#">맴버십카드등록</a></li>
+                    </ul>
+                </div>
+                <div class="text2">
+                    <p>부산 중구 중앙대로 26 10층 (주)뉴트리즈 / 대표전화 : 080-100-1234
+                        <br>사업자등록번호 : 123-12-12345 / 대표자 : 정한석
+                        <br>통신판매업 : 제 2024-부산 - 01001호
+                        <br>COPYRIGHT ⓒ NUTRIZ. ALL RIGHT RESERVED.
+                    </p>
+                </div>
+                <div class="sns_img">
+                    <div class="sns_img1"><a href="#"></a></div>
+                    <div class="sns_img2"><a href="#"></a></div>
+                    <div class="sns_img3"><a href="#"></a></div>
+                    <div class="sns_img4"><a href="#"></a></div>
+                </div>
+            </div>
+
+        </div>
+        <!-- footer E-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+    <script>
+        // 기본 가격 설정
+        const productPrice = 38000;
+        const quantityInput = document.getElementById('quantity');
+        const totalPriceElement = document.getElementById('total-price');
+
+        // 숫자를 '38,000원' 형식으로 변환하는 함수
+        function formatPrice(price) {
+            return price.toLocaleString() + '원';
+        }
+
+        // 수량 변경 함수
+        function changeQuantity(change) {
+            let currentQuantity = parseInt(quantityInput.value);
+            let newQuantity = currentQuantity + change;
+
+            // 수량은 1 미만으로 내려갈 수 없음
+            if (newQuantity < 1) return;
+
+            quantityInput.value = newQuantity;
+            updateTotalPrice();
+        }
+
+        // 총 가격 업데이트 함수
+        function updateTotalPrice() {
+            let count = parseInt(quantityInput.value);
+            let total = productPrice * count;
+            totalPriceElement.innerText = formatPrice(total);
+        }
+    </script>
+
+
+</body>
+
+</html>
