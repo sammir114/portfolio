@@ -1,0 +1,401 @@
+/* 1. 기본 스타일 초기화 */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  background-color: #FDFAF8;
+}
+
+#wrap_wrap {
+    width: 100%;
+    overflow-x: hidden; /* 가로 스크롤 넘침 방지 */
+}
+
+/* 원하는 높이로 스크롤시 아이콘나타나기 */
+.top {
+  position: fixed;
+  bottom: 120px;
+  right: 50px;
+  display: none;
+  z-index: 99;
+}
+
+.home {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  display: none;
+  z-index: 99;
+}
+
+
+
+
+/* header 꾸미기 */
+.header {
+    /* 수정: 고정 너비 1320px -> 최대 너비로 변경 */
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+  padding: 25px;
+}
+.logo img {
+    /* 모바일에서 로고가 너무 크지 않게 조절 */
+    max-width: 100%; 
+    height: auto;
+}
+
+
+
+/* 메인배너 / Swiper 꾸미기  */
+#main_banner {
+    /* 수정: 고정 너비 -> 반응형 */
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+#main_banner .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+#main_banner .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+
+/* <!-- 상세페이지 --> */
+
+
+
+/* 2. 레이아웃 (컨테이너) */
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* 3. 상단 제품 섹션 (PC: Flexbox 사용) */
+.product-section {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+/* 왼쪽: 제품 이미지 */
+.product-image {
+  flex: 1;
+}
+
+.product-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* 오른쪽: 제품 정보 */
+.product-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.brand {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.product-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.rating {
+  color: #f39c12;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #d32f2f;
+}
+
+.description {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 20px 0;
+}
+
+/* 옵션 및 수량 선택 */
+.option-group {
+  margin-bottom: 20px;
+}
+
+.option-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.option-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.quantity-control button {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+}
+
+.quantity-control input {
+  width: 50px;
+  height: 35px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-left: none;
+  border-right: none;
+}
+
+/* 총 가격 */
+.total-price-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* 구매 버튼 그룹 */
+.btn-group {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.btn-cart {
+  background: #fff;
+  border: 1px solid #333;
+  color: #333;
+}
+
+.btn-buy {
+  background: #333;
+  color: #fff;
+}
+
+.btn-cart:hover {
+  background: #f9f9f9;
+}
+
+.btn-buy:hover {
+  background: #555;
+}
+
+/* 4. 하단 상세정보 탭 */
+.detail-tabs {
+  border-top: 1px solid #ddd;
+}
+
+.tab-buttons {
+  display: flex;
+  cursor: pointer;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 15px;
+  text-align: center;
+  background: #f1f1f1;
+  border-bottom: 1px solid #ddd;
+  font-weight: bold;
+  font-size: 14px; /* 모바일 대응 글자 크기 조정 */
+}
+
+.tab-btn.active {
+  background: #fff;
+  border-bottom: 2px solid #333;
+  color: #333;
+}
+
+.tab-content {
+  padding: 40px 0 0;
+  text-align: center;
+  color: #777;
+  min-height: 300px;
+}
+
+.tab-content img {
+  /* 수정: 이미지가 화면 밖으로 나가는 문제 해결 */
+    display: block;
+    margin: 0 auto; /* 중앙 정렬 */
+    padding-left: 0; /* 기존 150px 패딩 제거 */
+    max-width: 100%; /* 화면 너비에 맞춤 */
+    height: auto;
+  
+}
+
+
+
+/* footer 꾸미기 */
+#footer {
+  background-color: #076633;
+  /* height: 188px; -> 높이 고정 제거 (내용에 따라 늘어나도록) */
+    padding: 30px 0;
+    color: white;
+
+}
+
+.footer_wrap {
+  /* 수정: 고정 1000px -> 반응형 */
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 20px; /* 좌우 여백 추가 */
+
+}
+
+.text1 {
+  display: flex;
+    padding: 20px 0;
+    flex-wrap: wrap; /* 화면 좁으면 줄바꿈 */
+}
+
+.text1 li a {
+  padding-right: 20px;
+  font-size: 14px;
+}
+.text2 p {
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* PC버전에서 위치 잡기 */
+.footer_logo {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+}
+.footer_logo img {
+    max-width: 120px; /* 로고 크기 제한 */
+}
+
+.text1 :hover {
+  color: orange;
+}
+
+
+
+/* ================================================= */
+/* 모바일 반응형 미디어 쿼리 (핵심 수정 구간) */
+/* ================================================= */
+
+/* 1. 제품 상세 레이아웃 세로 정렬 */
+    .product-section {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .product-title {
+        font-size: 22px;
+    }
+
+
+    /* 3. 탭 버튼 크기 조정 */
+    .tab-btn {
+        padding: 12px 5px;
+        font-size: 13px;
+    }
+
+    /* 4. Footer 모바일 최적화 */
+    #footer {
+        padding-bottom: 80px; /* 하단 고정 버튼 때문에 가려지지 않게 여백 추가 */
+        text-align: center; /* 텍스트 중앙 정렬 */
+    }
+
+    .footer_wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text1 {
+        justify-content: center;
+        gap: 10px;
+        padding: 10px 0;
+    }
+    
+    .text1 li a {
+        padding-right: 0; /* 기존 우측 패딩 제거하고 gap 사용 */
+    }
+
+    .text2 {
+        order: 3; /* 순서 조정 */
+        margin-top: 20px;
+    }
+
+    /* 절대 위치(absolute) 해제하고 흐름에 맞게 배치 */
+    .footer_logo {
+        position: static;
+        order: 1;
+        margin-bottom: 10px;
+    }
+    
